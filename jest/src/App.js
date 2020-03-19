@@ -27,9 +27,6 @@ const App = () => {
         SIGN IN
       </button>
       {isModalOpen && <Modal
-        isModalOpen={isModalOpen}
-        setIsAuthenticated={setIsAuthenticated}
-        setIsModalOpen={setIsModalOpen}
         onSubmit={onSubmit}
       />}
     </div>

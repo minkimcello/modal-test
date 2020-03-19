@@ -1,16 +1,9 @@
 # test blog
 ## testing frameworks to research
   - [x] jest + react testing library
-  - [ ] mocha + chai
+  - [x] mocha(runner) + chai(expect) + enzyme(simulating react)
   - [ ] cypress
-  - [ ] enzyme + jasmine + karma?
-
-# questions
-- googling for these answers gave me a bunch of different answers
-  - integration test is a collection of unit tests.
-    - testing modal = integration test?
-  - acceptance test vs end to end test?
-  - toBeInTheDocument() - does not find detached elements, so use toContainElement(). what is a detached element?
+  - [ ] jasmine(testing library) + karma(runner)?
 
 ```js
 // cypress when do these tests supposed to run usually?
@@ -24,8 +17,8 @@ describe('My First Test', function() {
     cy.get('.email')
       .type('my@email.com')
       .should('have.value', 'my@email.com')
-  })
-})
+  });
+});
 ```
 
 # jest matchers
@@ -42,3 +35,7 @@ toHaveValue() = for components with input value (textarea, input, etc)
 # queries
 getBy - returns first matching node but error if none or multiple
 getAllBy - array, error if none
+
+# notes
+when tests are retriggered, we should show it immediately.
+- mocha don't do that
