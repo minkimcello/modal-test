@@ -21,7 +21,7 @@ const App = () => {
       }
       <button
         className="sign-in-button"
-        // onClick={() => setIsModalOpen(true)} // disable this
+        onClick={() => setIsModalOpen(true)} // disable this
         style={{ display: !isAuthenticated ? "block" : "none" }}
       >
         SIGN IN
@@ -46,7 +46,6 @@ const Modal = ({
         onSubmit(username, password)
       }}
       className="modal"
-      data-testid="modal"
     >
       <input
         className="modal-input"

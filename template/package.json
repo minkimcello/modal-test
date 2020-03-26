@@ -7,19 +7,10 @@
     "react-dom": "^16.13.0",
     "react-scripts": "3.4.0"
   },
-  "devDependencies": {
-    "@babel/register": "^7.8.6",
-    "chai": "^4.2.0",
-    "enzyme": "^3.11.0",
-    "enzyme-adapter-react-16": "^1.15.2",
-    "ignore-styles": "^5.0.1",
-    "jsdom": "^16.2.1",
-    "mocha": "^7.1.0"
-  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "mocha --require @babel/register --require ignore-styles --require ./src/tests/helper.js 'src/**/*.spec.js' --watch",
+    "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
