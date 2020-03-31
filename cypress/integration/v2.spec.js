@@ -31,7 +31,7 @@ describe('Arrange, Act, Assert with Cypress', () => {
         });
 
         it('shows the welcome text', () => {
-          cy.get('[data-testid=hello-username]').should('have.text', 'Hello minkim.');
+          cy.get('[data-testid=welcome-text]').should('have.text', 'Hello minkim.');
         });
       });
     });

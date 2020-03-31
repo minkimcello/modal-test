@@ -5,6 +5,7 @@ import App from '../App';
 
 describe('Simple Testing with Mocha', () => {
   it('displays submitted data from modal', () => {
+    // eslint-disable-next-line no-undef
     const app = mount(<App />);
     expect(app.find('Modal')).to.have.length(0); // before click
     app.find('button').at(0).simulate('click');

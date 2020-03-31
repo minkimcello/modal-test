@@ -7,6 +7,6 @@ describe('Simple Testing with Cypress', () => {
     cy.get('[data-testid=modal-username]').type('minkim');
     cy.get('[data-testid=modal]').submit();
     cy.get('[data-testid=modal]').should('not.be.visible');
-    cy.get('[data-testid=hello-username]').should('have.text', 'Hello minkim.');
+    cy.get('[data-testid=welcome-text]').should('have.text', 'Hello minkim.');
   });
 });

@@ -24,7 +24,7 @@ describe('Arrange Act Assert with Jest', () => {
       });
 
       describe('submitting the data', () => {
-        beforeEach(() => fireEvent.click(app.getByTestId('modal-button')));
+        beforeEach(() => fireEvent.click(app.getByTestId('modal-submit')));
 
         it('closes the modal', () => {
           expect(app.queryByTestId('modal')).toBeNull();

@@ -9,7 +9,7 @@ describe('Simple Testing with Jest', () => {
     fireEvent.click(getByTestId('sign-in-button'));
     expect(queryByTestId('modal')).toBeVisible();
     fireEvent.change(getByTestId('modal-username'), { target: { value: 'minkim' } });
-    fireEvent.click(getByTestId('modal-button'));
+    fireEvent.click(getByTestId('modal-submit'));
     expect(queryByTestId('modal')).toBeNull();
     expect(getByText('Hello minkim.')).toBeVisible();
   });

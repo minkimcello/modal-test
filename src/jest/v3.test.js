@@ -31,9 +31,9 @@ describe('Modal Test with BigTest', () => {
         requires(() => app.getByTestId('modal-username'), () => new Error('Could not fill USERNAME with value minkim'));
 
         describe('submitting the data', () => {
-          requires(() => app.getByTestId('modal-button'), () => new Error('Could not find SUBMIT'));
+          requires(() => app.getByTestId('modal-submit'), () => new Error('Could not find SUBMIT'));
 
-          beforeEach(() => fireEvent.click(app.getByTestId('modal-button')));
+          beforeEach(() => fireEvent.click(app.getByTestId('modal-submit')));
 
           it('closes the modal', () => {
             expect(app.queryByTestId('modal')).toBeNull();

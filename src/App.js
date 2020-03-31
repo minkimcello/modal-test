@@ -15,7 +15,7 @@ const App = () => {
   return (
     <div className="App">
       {isAuthenticated &&
-        <p data-testid="hello-username">
+        <p data-testid="welcome-text">
           Hello {credentials.username}.
         </p>
       }
@@ -59,16 +59,15 @@ const Modal = ({
       />
       <input
         className="modal-input"
-        placeholder="PASSWORD"//
+        placeholder="PASSWORD"
         type="password"
         onChange={e => setPassword(e.target.value)}
         value={password}
-        data-testid="modal-password"
       />
       <button
-        className="modal-button"
+        className="modal-submit"
         type="submit"
-        data-testid="modal-button"
+        data-testid="modal-submit"
       >
         SUBMIT
       </button>
