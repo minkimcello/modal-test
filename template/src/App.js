@@ -15,14 +15,15 @@ const App = () => {
   return (
     <div className="App">
       {isAuthenticated &&
-        <p>
-          Hello <span className="username">{credentials.username}</span>.
+        <p data-testid="hello-username">
+          Hello {credentials.username}.
         </p>
       }
       <button
         className="sign-in-button"
         onClick={() => setIsModalOpen(true)} // disable this
         style={{ display: !isAuthenticated ? "block" : "none" }}
+        data-testid="sign-in-button"
       >
         SIGN IN
       </button>
@@ -46,6 +47,7 @@ const Modal = ({
         onSubmit(username, password)
       }}
       className="modal"
+      data-testid="modal"
     >
       <input
         className="modal-input"
@@ -53,17 +55,20 @@ const Modal = ({
         type="text"
         onChange={e => setUsername(e.target.value)}
         value={username}
+        data-testid="modal-username"
       />
       <input
         className="modal-input"
-        placeholder="PASSWORD"
+        placeholder="PASSWORD"//
         type="password"
         onChange={e => setPassword(e.target.value)}
         value={password}
+        data-testid="modal-password"
       />
       <button
         className="modal-button"
         type="submit"
+        data-testid="modal-button"
       >
         SUBMIT
       </button>
