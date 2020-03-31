@@ -3,7 +3,7 @@ import { render, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import App from '../App';
 
-describe('Modal Test with Arrange Act Assert', () => {
+describe('Arrange Act Assert with Jest', () => {
   let app;
   beforeEach(() => {
     app = render(<App />);
