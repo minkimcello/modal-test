@@ -9,9 +9,9 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "jest": "react-scripts test --verbose ./src/jest/*",
+    "cypt": "yarn cypress run --spec 'cypress/integration/*",
+    "cypo": "yarn cypress open"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -27,5 +27,13 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "cypress": "^4.3.0",
+    "cypress-dark": "^1.7.14",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "react-test-renderer": "^16.13.1"
   }
 }
