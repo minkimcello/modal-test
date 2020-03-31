@@ -10,7 +10,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "yarn cypress run --spec 'cypress/integration/form.spec.js'",
+    "test": "yarn cypress run --spec 'cypress/integration/*'",
     "eject": "react-scripts eject",
     "open": "yarn cypress open"
   },
