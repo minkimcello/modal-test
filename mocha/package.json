@@ -19,7 +19,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "mocha --require @babel/register --require ignore-styles --require ./src/tests/helper.js 'src/**/*.spec.js' --watch",
+    "moch": "mocha --require @babel/register --require ignore-styles --require ./src/tests/helper.js 'src/tests/*.spec.js' --watch",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
