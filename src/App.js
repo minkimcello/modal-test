@@ -21,7 +21,7 @@ const App = () => {
       }
       <button
         className="sign-in-button"
-        onClick={() => setIsModalOpen(true)} // disable this
+        // onClick={() => setIsModalOpen(true)} // disable this
         style={{ display: !isAuthenticated ? "block" : "none" }}
         data-testid="sign-in-button"
       >
