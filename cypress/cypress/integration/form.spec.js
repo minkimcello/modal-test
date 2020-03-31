@@ -3,7 +3,20 @@
 describe('Cypress', () => {
   beforeEach('visits the app', () => {
     cy.visit('/');
+    cy.get('[data-testid=sign-in-button]').click();
   });
+  it('shows modal after clicking on button', () => {
+    cy.get('[data-testid=modal]').should('be.visible');
+  });
+  describe('', () => {
+    beforeEach('fill', () => {
+      cy.get('[data-testid=modal-username]').type('yeah');
+      cy.get('[data-testid=modal-password]').type('yeah');
+    })
+    it('types', () => {
+      cy.get('[data-testid=modal-username]').should('have.value', 'yeah');
+    });
+  })
   // it('focuses the input', () => {
   //   cy.focused().should('have.class', 'form-control');
   // });

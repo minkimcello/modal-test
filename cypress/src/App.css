@@ -51,11 +51,3 @@ body {
   border-radius: 10px;
   font-size: calc(3px + 1.5vmin);
 }
-
-.username {
-  color: green;
-}
-
-.password {
-  color:red;
-}
