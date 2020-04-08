@@ -1,0 +1,22 @@
+version: 2.1
+orbs:
+  node: circleci/node@1.1.6
+  cypress: cypress-io/cypress@1
+jobs:
+  jest:
+    executor:
+      name: node/default
+    steps:
+      - checkout
+      - run: yarn
+      - run: yarn jest
+workflows:
+  jest-workflow:
+    jobs:
+      - jest
+  cypress-workflow:
+    jobs:
+      - cypress/run:
+          install-command: yarn
+          start: yarn start
+ 

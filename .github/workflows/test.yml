@@ -1,0 +1,26 @@
+name: Tests
+
+on: 
+  pull_request
+
+jobs:
+  cypress:
+    name: Test with Cypress
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Install dependencies
+        run: yarn
+      - name: Cypress run
+        uses: cypress-io/github-action@v1
+        with:
+          start: yarn start
+  jest:
+    name: Test with Jest
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Install dependencies
+        run: yarn
+      - name: Run Jest
+        run: yarn jest

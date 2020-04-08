@@ -28,8 +28,6 @@ describe('Modal Test with BigTest', () => {
 
         beforeEach(() => fireEvent.change(app.getByTestId('modal-username'), { target: { value: 'minkim' } }));
 
-        // requires(() => app.getByTestId('modal-username').toEqual('minkim'), () => new Error('Could not fill USERNAME with value minkim'));
-
         describe('submitting the data', () => {
           requires(() => app.getByTestId('modal-submit'), () => new Error('Could not find SUBMIT'));
 
@@ -45,6 +43,5 @@ describe('Modal Test with BigTest', () => {
         });
       });
     });
-
   });
 });
