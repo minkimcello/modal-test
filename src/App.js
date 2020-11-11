@@ -15,13 +15,13 @@ const App = () => {
   return (
     <div className="App">
       {isAuthenticated &&
-        <p data-testid="welcome-text">
+        <h1 data-testid="welcome-text">
           Hello {credentials.username}.
-        </p>
+        </h1>
       }
       <button
         className="sign-in-button"
-        // onClick={() => setIsModalOpen(true)} // disable this
+        onClick={() => setIsModalOpen(true)} // disable this
         style={{ display: !isAuthenticated ? "block" : "none" }}
         data-testid="sign-in-button"
       >
