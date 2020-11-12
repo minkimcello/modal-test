@@ -6,12 +6,12 @@ import mount from 'enzyme/build/mount';
 
 // bigtestGlobals.document = mount(<App />);
 
-describe('Simple Testing with Mocha', () => {
+describe('Simple Testing with Mocha/Enzyme', () => {
   it('displays submitted data from modal', async () => {
     mount(<App/>);
     await Button('SIGN IN').click();
-    await TextField({ placeholder: "USERNAME "}).fillIn('minkim');
+    await TextField({ placeholder: "USERNAME "}).fillIn('batman');
     await Button('SUBMIT').click();
-    await Heading('Hello minkim.').exists();
+    await Heading('Hello batman.').exists();
   });
 });

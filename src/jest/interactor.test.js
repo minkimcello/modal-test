@@ -9,8 +9,8 @@ render(<App />);
 describe('Simple Testing with Jest', () => {
   it('displays submitted data from modal', async () => {
     await Button('SIGN IN').click();
-    await TextField({ placeholder: 'USERNAME' }).fillIn('minkim');
+    await TextField({ placeholder: 'USERNAME' }).fillIn('batman');
     await Button('SUBMIT').click();
-    await Heading('Hello .').exists();
+    await Heading('Hello batman.').exists();
   });
 });

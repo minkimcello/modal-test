@@ -1,0 +1,14 @@
+{
+  "name": "@bigtest/cypress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dingdong.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "minkimcello",
+  "license": "ISC",
+  "devDependencies": {
+    "@bigtest/globals": "^0.7.2"
+  }
+}

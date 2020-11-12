@@ -14,8 +14,9 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
-import './commands'
+// import '../../bigtest-cypress/dingdong';
+import '@bigtest/cypress';
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
-require('cypress-dark')
+// require('cypress-dark')
