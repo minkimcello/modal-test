@@ -9,8 +9,8 @@
     "react-scripts": "3.4.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "jest": "react-scripts test --verbose ./src/jest/i*",
+    "start": "SKIP_PREFLIGHT_CHECK=true react-scripts start",
+    "jest": "SKIP_PREFLIGHT_CHECK=true react-scripts test --verbose ./src/jest/i*",
     "cypr": "yarn cypress run --spec 'cypress/integration/i*.spec.js'",
     "cypo": "yarn cypress open",
     "moch": "mocha --require @babel/register --require ignore-styles --require ./src/mocha/helper.js 'src/mocha/i*.spec.js'"
@@ -33,13 +33,13 @@
   "devDependencies": {
     "@babel/plugin-transform-runtime": "^7.12.1",
     "@babel/register": "^7.8.6",
-    "@bigtest/cypress": "file:./bigtest-cypress",
+    "@bigtest/globals": "^0.7.2",
     "@cypress/webpack-preprocessor": "^5.4.11",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "babel-loader": "^8.2.1",
-    "bigtest": "^0.5.0",
+    "bigtest": "*",
     "chai": "^4.2.0",
     "cypress": "^4.3.0",
     "cypress-dark": "^1.7.14",
