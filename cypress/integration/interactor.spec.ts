@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 import { Button, Heading, TextField } from 'bigtest';
 
 describe('Cypress with Interactors', () => {
