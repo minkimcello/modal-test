@@ -4,23 +4,37 @@ on:
   pull_request
 
 jobs:
-  cypress:
-    name: Test with Cypress
-    runs-on: ubuntu-latest
+  # cypress:
+  #   name: Test with Cypress
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v1
+  #     - name: Install dependencies
+  #       run: yarn
+  #     - name: Cypress run
+  #       uses: cypress-io/github-action@v2
+  #       with:
+  #         start: yarn start
+  # jest:
+  #   name: Test with Jest
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v1
+  #     - name: Install dependencies
+  #       run: yarn
+  #     - name: Run Jest
+  #       run: yarn jest
+  dingdong:
+    runs-on: ${{ matrix.platform }}
+    name: ${{ matrix.package }} (${{ matrix.platform }})
+    strategy:
+      matrix:
+        platform: [ubuntu-latest, windows-latest]
+        package: [one, two]
     steps:
-      - uses: actions/checkout@v1
-      - name: Install dependencies
-        run: yarn
-      - name: Cypress run
-        uses: cypress-io/github-action@v2
-        with:
-          start: yarn start
-  jest:
-    name: Test with Jest
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v1
-      - name: Install dependencies
-        run: yarn
-      - name: Run Jest
-        run: yarn jest
+    - name: only if two and ubunutu
+      if: ${{ matrix.package == 'two' && matrix.platform == 'ubuntu-latest '}}
+      run: echo ubunutu and two ${{ matrix.package }} ${{ matrix.platform }}
+    - name: only on windows
+      if: ${{ matrix.platform == 'windows-latest' }}
+      run: echo ${{ matrix.package }} ${{ matrix.platform }}
