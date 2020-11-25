@@ -33,9 +33,5 @@ jobs:
         package: [one, two]
     steps:
     - name: only if two and ubunutu
-      run: |
-        if [ ${{ matrix.package }} == 'two' ]; then
-          echo it is two
-        else
-          echo it is not two
-        fi
+      if: ${{ matrix.package == two }}
+      run: echo it is two
