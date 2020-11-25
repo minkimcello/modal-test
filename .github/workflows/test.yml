@@ -33,8 +33,9 @@ jobs:
         package: [one, two]
     steps:
     - name: only if two and ubunutu
-      if: ${{ matrix.package == 'two' }}
-      run: echo ubunutu and two ${{ matrix.package }} ${{ matrix.platform }}
-    - name: only on windows
-      if: ${{ matrix.platform == 'windows-latest' }}
-      run: echo ${{ matrix.package }} ${{ matrix.platform }}
+      run: |
+        if [ ${{ matrix.package }} == 'two' ]; then
+          echo it is two
+        else
+          echo it is not two
+        fi
