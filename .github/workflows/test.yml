@@ -33,7 +33,7 @@ jobs:
         package: [one, two]
     steps:
     - name: only if two and ubunutu
-      if: ${{ matrix.package == 'two' && matrix.platform == 'ubuntu-latest '}}
+      if: ${{ matrix.package == 'two' }} && ${{ matrix.platform == 'ubuntu-latest '}}
       run: echo ubunutu and two ${{ matrix.package }} ${{ matrix.platform }}
     - name: only on windows
       if: ${{ matrix.platform == 'windows-latest' }}
